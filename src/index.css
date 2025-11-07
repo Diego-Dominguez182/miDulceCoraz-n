@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body,
+#root {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: var(--text);
+  background: var(--bg);
+}
+
+:root {
+  --primary: #e91e63;
+  --primaryDark: #c2185b;
+  --red: #e53935;
+  --cream: #fff3e8;
+  --choco: #5d4037;
+  --green: #2e7d32;
+  --text: #0f172a;
+  --muted: #64748b;
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --band: #111111;
+
+  --container: 1200px;
+  --radius-xl: 18px;
+  --radius-2xl: 26px;
+  --shadow-sm: 0 6px 18px rgba(15, 23, 42, 0.08);
+  --shadow-md: 0 12px 30px rgba(15, 23, 42, 0.12);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: 16px;
+}
+.section {
+  padding: 64px 0;
+}
+.lead {
+  color: var(--muted);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.05s ease, background 0.2s ease, color 0.2s ease,
+    border-color 0.2s ease;
+}
+.btn:focus {
+  outline: 3px solid color-mix(in srgb, var(--primary), #fff 60%);
+}
+.btn:active {
+  transform: translateY(1px);
+}
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+}
+.btn-primary:hover {
+  background: var(--primaryDark);
+}
+.btn-outline {
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  background: #fff;
+}
+.btn-outline:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+.badge {
+  display: inline-block;
+  background: var(--cream);
+  color: var(--choco);
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.card {
+  background: var(--card);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+.card-body {
+  padding: 18px;
+}
