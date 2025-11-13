@@ -1,7 +1,9 @@
 import React, { useEffect } from "react";
+import { CartProvider } from "./context/CartContext";
 import Header from "./components/Header.jsx";
 import Footer from "./components/Footer.jsx";
 import HomePage from "./pages/index.jsx";
+import Cart, { CartButton } from "./components/Cart.jsx";
 import "./App.css";
 
 export default function App() {
@@ -25,10 +27,12 @@ export default function App() {
   }, []);
 
   return (
-    <>
+    <CartProvider>
       <Header />
       <HomePage />
       <Footer />
-    </>
+      <CartButton />
+      <Cart />
+    </CartProvider>
   );
 }

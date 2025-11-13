@@ -1,9 +1,39 @@
 export default function useWhatsApp() {
-  const phone = "+529211241515";
+  const phone = "+529211688116";
   const link = (message = "Hola, quiero hacer un pedido") => {
     const text = encodeURIComponent(message);
     const phoneDigits = phone.replace(/[^\d]/g, "");
     return `https://wa.me/${phoneDigits}?text=${text}`;
   };
-  return { waLink: link };
+
+  const formatOrder = (cartItems, total) => {
+    const emoji = {
+      header: '🍓',
+      item: '✅',
+      total: '💰',
+      thanks: '🙏',
+    };
+
+    let message = `${emoji.header} *PEDIDO - MI DULCE CORAZÓN*\n\n`;
+    message += `━━━━━━━━━━━━━━━━━━━━\n\n`;
+    message += `*📋 DETALLE DEL PEDIDO*\n\n`;
+
+    cartItems.forEach((item, index) => {
+      const subtotal = item.price * item.quantity;
+      message += `${index + 1}. ${emoji.item} *${item.name}*\n`;
+      message += `   Cantidad: ${item.quantity}\n`;
+      message += `   Precio unitario: $${item.price}\n`;
+      message += `   Subtotal: $${subtotal}\n\n`;
+    });
+
+    message += `━━━━━━━━━━━━━━━━━━━━\n`;
+    message += `${emoji.total} *TOTAL A PAGAR: $${total}*\n\n`;
+    message += `━━━━━━━━━━━━━━━━━━━━\n\n`;
+    message += `${emoji.thanks} *¡Gracias por tu pedido!*\n\n`;
+    message += `Por favor confirma la disponibilidad y el tiempo de entrega.`;
+
+    return message;
+  };
+
+  return { waLink: link, formatOrder };
 }

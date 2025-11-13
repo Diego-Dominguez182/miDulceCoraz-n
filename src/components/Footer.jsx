@@ -31,7 +31,7 @@ export default function Footer() {
 
         <div>
           <h4>Horarios</h4>
-          <p className="small">L–D 12:00–21:00</p>
+          <p className="small">L-D 12:00-21:00</p>
           <p className="small">
             Av. Miguel Hidalgo 1318, Coatzacoalcos, Veracruz
           </p>
