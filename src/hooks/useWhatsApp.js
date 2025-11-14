@@ -14,7 +14,7 @@ export default function useWhatsApp() {
       thanks: '🙏',
     };
 
-    let message = `${emoji.header} *PEDIDO - MI DULCE CORAZÓN*\n\n`;
+    let message = ` *PEDIDO - MI DULCE CORAZÓN*\n\n`;
     message += `━━━━━━━━━━━━━━━━━━━━\n\n`;
     message += `*📋 DETALLE DEL PEDIDO*\n\n`;
 
@@ -27,9 +27,9 @@ export default function useWhatsApp() {
     });
 
     message += `━━━━━━━━━━━━━━━━━━━━\n`;
-    message += `${emoji.total} *TOTAL A PAGAR: $${total}*\n\n`;
+    message += ` *TOTAL A PAGAR: $${total}*\n\n`;
     message += `━━━━━━━━━━━━━━━━━━━━\n\n`;
-    message += `${emoji.thanks} *¡Gracias por tu pedido!*\n\n`;
+    message += ` *¡Gracias por tu pedido!*\n\n`;
     message += `Por favor confirma la disponibilidad y el tiempo de entrega.`;
 
     return message;
