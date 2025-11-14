@@ -2,6 +2,7 @@ export default function Footer() {
   return (
     <footer role="contentinfo">
       <div className="container footer-grid">
+
         <div>
           <div className="brand">
             <strong>Mi Dulce Corazón</strong>
@@ -14,18 +15,10 @@ export default function Footer() {
         <div>
           <h4>Enlaces</h4>
           <nav aria-label="Enlaces rápidos">
-            <div>
-              <a href="#inicio">Inicio</a>
-            </div>
-            <div>
-              <a href="#menu">Menú</a>
-            </div>
-            <div>
-              <a href="#especialidades">Especialidades</a>
-            </div>
-            <div>
-              <a href="#contacto">Contacto</a>
-            </div>
+            <div><a href="#inicio">Inicio</a></div>
+            <div><a href="#menu">Menú</a></div>
+            <div><a href="#especialidades">Especialidades</a></div>
+            <div><a href="#contacto">Contacto</a></div>
           </nav>
         </div>
 
@@ -39,22 +32,28 @@ export default function Footer() {
 
         <div>
           <h4>Redes</h4>
+
           <p className="small">
-            <a href="#" aria-label="Instagram">
+            <a
+              href="https://www.instagram.com/fresas_midulcecorazon/"
+            >
               Instagram
             </a>
           </p>
           <p className="small">
-            <a href="#" aria-label="Facebook">
+            <a
+              href="#"
+              aria-label="Facebook"
+            >
               Facebook
             </a>
           </p>
         </div>
+
       </div>
 
       <div className="container footer-mini">
-        © {new Date().getFullYear()} Mi Dulce Corazón — Aviso de privacidad •
-        Términos
+        © {new Date().getFullYear()} Mi Dulce Corazón — Aviso de privacidad • Términos
       </div>
     </footer>
   );
