@@ -16,11 +16,11 @@ export default function useWhatsApp() {
 
     let message = ` *PEDIDO - MI DULCE CORAZÓN*\n\n`;
     message += `━━━━━━━━━━━━━━━━━━━━\n\n`;
-    message += `*📋 DETALLE DEL PEDIDO*\n\n`;
+    message += `*DETALLE DEL PEDIDO*\n\n`;
 
     cartItems.forEach((item, index) => {
       const subtotal = item.price * item.quantity;
-      message += `${index + 1}. ${emoji.item} *${item.name}*\n`;
+      message += `${index + 1}. *${item.name}*\n`;
       message += `   Cantidad: ${item.quantity}\n`;
       message += `   Precio unitario: $${item.price}\n`;
       message += `   Subtotal: $${subtotal}\n\n`;
