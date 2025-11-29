@@ -16,7 +16,6 @@ export default function HomePage() {
     <main id="content">
       <Hero />
 
-      {/* Especialidades */}
       <section id="especialidades" className="container section">
         <div className="section-header">
           <h2>Nuestros Imperdibles</h2>
@@ -31,7 +30,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Menú - Fresas con Crema */}
       <section id="menu" className="container section">
         <div className="section-header">
           <h2>Menú</h2>
@@ -75,7 +73,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Ubicación */}
       <section id="ubicacion" className="container section">
         <div className="section-header">
           <h2>Ubicación y Horarios</h2>
@@ -133,7 +130,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Contacto */}
       <section id="contacto" className="container section">
         <div className="section-header">
           <h2>Contacto</h2>

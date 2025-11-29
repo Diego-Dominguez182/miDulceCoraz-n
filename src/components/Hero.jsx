@@ -1,5 +1,4 @@
 import React from "react";
-import fresasConPay from "../assets/images/fresasconpay.jpg";
 import useWhatsApp from "../hooks/useWhatsApp";
 
 export default function Hero() {
@@ -40,7 +39,7 @@ export default function Hero() {
         </span>
 
         <img
-          src={fresasConPay}
+          src="/images/fresasconpay.jpg"
           alt="Vaso de fresas con crema con topping de pay de queso y chocolate"
           loading="eager"
         />

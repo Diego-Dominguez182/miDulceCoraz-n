@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useCart } from '../context/CartContext';
+import { useAuth } from '../context/AuthContext';
 import useWhatsApp from '../hooks/useWhatsApp';
 
 export default function Cart() {
@@ -14,19 +15,49 @@ export default function Cart() {
     clearCart,
   } = useCart();
   const { waLink, formatOrder } = useWhatsApp();
+  const { isAuthenticated, token } = useAuth();
   const [isCheckingOut, setIsCheckingOut] = useState(false);
 
-  const handleCheckout = () => {
+  const handleCheckout = async () => {
     if (cartItems.length === 0) return;
     
     setIsCheckingOut(true);
+
+    if (isAuthenticated && token) {
+      try {
+        console.log("Intentando guardar pedido...", { items: cartItems, total: getTotalPrice() });
+        const res = await fetch('http://localhost:3001/api/orders', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'x-access-token': token
+          },
+          body: JSON.stringify({
+            items: cartItems,
+            total: getTotalPrice()
+          })
+        });
+        
+        if (!res.ok) {
+          const errData = await res.json();
+          console.error("Server error saving order:", errData);
+          alert("Hubo un problema al guardar tu pedido en el historial: " + (errData.error || "Error desconocido"));
+        } else {
+          console.log("Pedido guardado correctamente en historial.");
+        }
+      } catch (error) {
+        console.error("Network error saving order:", error);
+        alert("Error de red: No se pudo guardar el pedido en tu historial.");
+      }
+    } else {
+      console.log("Usuario no logueado, omitiendo guardado de historial.");
+    }
+
     const orderMessage = formatOrder(cartItems, getTotalPrice());
     const whatsappUrl = waLink(orderMessage);
     
-    // Abrir WhatsApp en nueva ventana
     window.open(whatsappUrl, '_blank');
     
-    // Limpiar carrito después de un breve delay
     setTimeout(() => {
       clearCart();
       setIsCartOpen(false);
@@ -38,14 +69,12 @@ export default function Cart() {
 
   return (
     <>
-      {/* Overlay */}
       <div
         className="cart-overlay"
         onClick={() => setIsCartOpen(false)}
         aria-hidden="true"
       />
       
-      {/* Cart Panel */}
       <div className="cart-panel" role="dialog" aria-label="Carrito de compras">
         <div className="cart-header">
           <h2>Tu Pedido</h2>
@@ -133,7 +162,6 @@ export default function Cart() {
   );
 }
 
-// Botón flotante del carrito
 export function CartButton() {
   const { getTotalItems, setIsCartOpen, isCartOpen } = useCart();
   const itemCount = getTotalItems();

@@ -1,8 +1,13 @@
 import React, { useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { CartProvider } from "./context/CartContext";
+import { AuthProvider } from "./context/AuthContext";
 import Header from "./components/Header.jsx";
 import Footer from "./components/Footer.jsx";
 import HomePage from "./pages/index.jsx";
+import Login from "./pages/Login.jsx";
+import Register from "./pages/Register.jsx";
+import Orders from "./pages/Orders.jsx";
 import Cart, { CartButton } from "./components/Cart.jsx";
 import "./App.css";
 
@@ -27,12 +32,21 @@ export default function App() {
   }, []);
 
   return (
-    <CartProvider>
-      <Header />
-      <HomePage />
-      <Footer />
-      <CartButton />
-      <Cart />
-    </CartProvider>
+    <AuthProvider>
+      <CartProvider>
+        <Router>
+          <Header />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/orders" element={<Orders />} />
+          </Routes>
+          <Footer />
+          <CartButton />
+          <Cart />
+        </Router>
+      </CartProvider>
+    </AuthProvider>
   );
 }
