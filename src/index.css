@@ -16,7 +16,7 @@ body {
   --primary: #e91e63;
   --primaryDark: #c2185b;
   --red: #e53935;
-  --cream: #fff3e8;
+  --cream: #fff8e1;
   --choco: #5d4037;
   --green: #2e7d32;
   --text: #0f172a;
@@ -44,7 +44,7 @@ a {
 .container {
   max-width: var(--container);
   margin-inline: auto;
-  padding-inline: 16px;
+  padding-inline: 1px;
 }
 .section {
   padding: 64px 0;
@@ -108,9 +108,3 @@ a {
 .card-body {
   padding: 18px;
 }
-.sticky-header .container.header {
-  max-width: 100%;
-  margin-inline: 0;
-  padding-left: 90px; /* keep some margin so text isn't glued to the edge */
-}
-
