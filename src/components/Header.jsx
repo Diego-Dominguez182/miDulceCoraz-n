@@ -130,13 +130,12 @@ export default function Header() {
 
                 {isAuthenticated ? (
                   <>
-                    <span className="small muted">Hola, {user?.username}</span>
-                    <a
-                      href="/orders"
-                      className="btn btn-outline"
-                      style={{ borderColor: 'var(--text)', color: 'var(--text)' }}
+                    <a 
+                      href="/orders" 
+                      className="btn header-profile-btn"
+                      onClick={closeMenu}
                     >
-                      Mis Pedidos
+                      Hola, {user?.username}
                     </a>
                     <button
                       className="btn btn-outline"

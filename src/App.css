@@ -809,3 +809,18 @@ footer {
   }
 }
 
+.header-profile-btn {
+  /* Basado en .btn-outline pero con colores invertidos para destacar */
+  border: 2px solid var(--primary); 
+  color: #fff;
+  background: var(--primary);
+  /* Ajuste de padding si es necesario */
+  padding: 12px 16px;
+  font-weight: 700;
+  white-space: nowrap; /* Evita que el nombre de usuario se rompa */
+}
+
+.header-profile-btn:hover {
+  background: var(--primaryDark);
+  border-color: var(--primaryDark);
+}
