@@ -3,6 +3,7 @@ import Hero from '../components/Hero.jsx';
 import ProductCard from '../components/ProductCard.jsx';
 import { products, getPopularProducts, getProductsByCategory } from '../data/products';
 import useWhatsApp from '../hooks/useWhatsApp';
+import MenuCarousel from "../components/MenuCarousel.jsx";
 
 export default function HomePage() {
   const { waLink } = useWhatsApp();
@@ -18,7 +19,7 @@ export default function HomePage() {
 
       <section id="especialidades" className="container section">
         <div className="section-header">
-          <h2>Nuestros Imperdibles</h2>
+          <h2>¡Lo que no te puedes perder!</h2>
           <p className="lead">
             Los productos más pedidos y mejor valorados por nuestros clientes
           </p>
@@ -30,48 +31,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="menu" className="container section">
-        <div className="section-header">
-          <h2>Menú</h2>
-          <p className="lead">Deliciosas opciones de fresas con crema y más</p>
-        </div>
+     <MenuCarousel />
 
-        <div className="menu-category">
-          <h3>🍓 Fresas con Crema</h3>
-          <div className="products-grid">
-            {fresasProducts.map((product) => (
-              <ProductCard key={product.id} product={product} />
-            ))}
-          </div>
-        </div>
-
-        <div className="menu-category">
-          <h3>🥞 Hotcakes y Waffles</h3>
-          <div className="products-grid">
-            {hotcakesProducts.map((product) => (
-              <ProductCard key={product.id} product={product} />
-            ))}
-          </div>
-        </div>
-
-        <div className="menu-category">
-          <h3>🍨 Helados</h3>
-          <div className="products-grid">
-            {heladosProducts.map((product) => (
-              <ProductCard key={product.id} product={product} />
-            ))}
-          </div>
-        </div>
-
-        <div className="menu-category">
-          <h3>🥤 Bebidas</h3>
-          <div className="products-grid">
-            {bebidasProducts.map((product) => (
-              <ProductCard key={product.id} product={product} />
-            ))}
-          </div>
-        </div>
-      </section>
 
       <section id="ubicacion" className="container section">
         <div className="section-header">
@@ -81,7 +42,7 @@ export default function HomePage() {
         <div className="location-grid">
           <div className="location-card card">
             <div className="card-body">
-              <h3>📍 Ubicación</h3>
+              <h3>Ubicación📍</h3>
               <p>
                 <strong>Av. Miguel Hidalgo 1318</strong>
                 <br />
@@ -99,7 +60,7 @@ export default function HomePage() {
           </div>
           <div className="location-card card">
             <div className="card-body">
-              <h3>🕐 Horarios</h3>
+              <h3>Horarios 🕐</h3>
               <p>
                 <strong>Lunes - Domingo</strong>
                 <br />
@@ -111,7 +72,7 @@ export default function HomePage() {
               </p>
             </div>
           </div>
-          <div className="location-card card">
+          {/* <div className="location-card card">
             <div className="card-body">
               <h3>🚚 Pedidos</h3>
               <p>
@@ -126,7 +87,7 @@ export default function HomePage() {
                 Pedir por WhatsApp
               </a>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 
