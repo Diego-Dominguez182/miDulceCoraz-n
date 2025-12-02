@@ -5,7 +5,8 @@ import ProductCard from "../components/ProductCard.jsx";
 const categoryLabels = {
   fresas: "Fresas con crema",
   bebidas: "Bebidas",
-  mas: "Más",
+  hotcakes: "Hotcakes/ Waffles",
+  mas: "Y más"
 };
 
 export default function MenuCarousel() {
