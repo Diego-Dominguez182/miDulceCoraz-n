@@ -108,3 +108,9 @@ a {
 .card-body {
   padding: 18px;
 }
+.sticky-header .container.header {
+  max-width: 100%;
+  margin-inline: 0;
+  padding-left: 90px; /* keep some margin so text isn't glued to the edge */
+}
+

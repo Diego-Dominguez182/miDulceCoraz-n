@@ -118,7 +118,7 @@ export default function HomePage() {
                 Realiza tu pedido por WhatsApp y lo preparamos al momento
               </p>
               <a
-                href={waLink('Hola, quiero hacer un pedido a domicilio')}
+                href={waLink('Hola, busco algo dulce para mi día… 🍓\n¿qué topping del día recomiendan?😋')}
                 className="btn btn-primary"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -143,7 +143,7 @@ export default function HomePage() {
               <h3>💬 WhatsApp</h3>
               <p>Chatea con nosotros para hacer tu pedido</p>
               <a
-                href={waLink('Hola, tengo una pregunta')}
+                href={waLink('Hola, busco algo dulce para mi día… 🍓\n¿qué topping del día recomiendan?😋')}
                 className="btn btn-primary"
                 target="_blank"
                 rel="noopener noreferrer"

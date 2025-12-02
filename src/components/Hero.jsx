@@ -20,7 +20,7 @@ export default function Hero() {
           </a>
 
           <a
-            href={waLink("Hola, quiero ordenar por WhatsApp")}
+            href={waLink('Hola, busco algo dulce para mi día… 🍓\n¿qué topping del día recomiendan?😋')}
             className="btn btn-outline"
           >
             Ordenar por WhatsApp

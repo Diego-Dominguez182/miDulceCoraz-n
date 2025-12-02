@@ -27,12 +27,12 @@ export default function Header() {
 
   return (
     <>
-      <div className="topbar" role="region" aria-label="Promociones">
+      {/* <div className="topbar" role="region" aria-label="Promociones">
         <div className="topbar-inner">
           <span>🍓 Postres frescos todos los días</span>
           <a href="#menu">Ver Menú →</a>
         </div>
-      </div>
+      </div> */}
 
       <div className="sticky-header">
         <header className="container header" role="banner">
@@ -40,10 +40,10 @@ export default function Header() {
             <a
               href="/"
               className="brand"
-              aria-label="Mi Dulce Corazón, ir al inicio"
+              aria-label="Mi dulce corazón, ir al inicio"
               onClick={closeMenu}
             >
-              <span>Mi Dulce Corazón</span>
+              <span className="brand-title">Mi dulce corazón</span>
             </a>
 
             <div className="header-actions-mobile">
@@ -154,7 +154,7 @@ export default function Header() {
           )}
           <a
             className="btn btn-primary"
-            href={waLink("Hola, quiero hacer un pedido")}
+            href={waLink('Hola, busco algo dulce para mi día… 🍓\n¿qué topping del día recomiendan?😋')}
             target="_blank"
             rel="noopener noreferrer"
             onClick={closeMenu}

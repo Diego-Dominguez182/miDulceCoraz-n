@@ -1,6 +1,6 @@
 export default function useWhatsApp() {
   const phone = "+529211688116";
-  const link = (message = "Hola, quiero hacer un pedido") => {
+  const link = (message = "Hola, busco algo dulce para mi día… 🍓\n¿qué topping del día recomiendan?😋") => {
     const text = encodeURIComponent(message);
     const phoneDigits = phone.replace(/[^\d]/g, "");
     return `https://wa.me/${phoneDigits}?text=${text}`;
