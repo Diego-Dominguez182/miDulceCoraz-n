@@ -42,7 +42,7 @@ export default function Footer() {
           </p>
           <p className="small">
             <a
-              href="#"
+              href="https://www.facebook.com/people/Postres-Mi-dulce-corazón/61552092275428/?sk=about&locale=es_LA"
               aria-label="Facebook"
             >
               Facebook

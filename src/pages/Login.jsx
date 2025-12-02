@@ -28,8 +28,9 @@ export default function Login() {
           {error && <p style={{ color: 'var(--red)', textAlign: 'center' }}>{error}</p>}
           <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
             <div>
-              <label style={{ display: 'block', marginBottom: '8px' }}>Email</label>
+              <label htmlFor='email-login' style={{ display: 'block', marginBottom: '8px' }}>Email</label>
               <input
+                id='email-login'
                 type="email"
                 required
                 value={email}

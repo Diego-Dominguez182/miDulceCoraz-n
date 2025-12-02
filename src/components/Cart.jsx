@@ -75,7 +75,7 @@ export default function Cart() {
         aria-hidden="true"
       />
       
-      <div className="cart-panel" role="dialog" aria-label="Carrito de compras">
+      <div className="cart-panel" role="dialog" aria-label="Carrito de compras" aria-modal="true">
         <div className="cart-header">
           <h2>Tu Pedido</h2>
           <button
