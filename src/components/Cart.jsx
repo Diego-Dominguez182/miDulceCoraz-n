@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useCart } from '../context/CartContext';
 import { useAuth } from '../context/AuthContext';
 import useWhatsApp from '../hooks/useWhatsApp';
+import { IoCartOutline } from "react-icons/io5";
+
 
 export default function Cart() {
   const {
@@ -152,7 +154,7 @@ export default function Cart() {
                 </button>
                 <p className="cart-note">
                   Se abrirá WhatsApp con tu pedido listo para enviar
-                </p>
+                </p> 
               </div>
             </>
           )}
@@ -174,7 +176,7 @@ export function CartButton() {
       onClick={() => setIsCartOpen(true)}
       aria-label={`Carrito de compras, ${itemCount} items`}
     >
-      <span className="cart-icon">🛒</span>
+      <IoCartOutline size={24} color="#ffffffff" />
       {itemCount > 0 && (
         <span className="cart-badge">{itemCount}</span>
       )}

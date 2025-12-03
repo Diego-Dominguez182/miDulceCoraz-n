@@ -62,17 +62,8 @@ export const products = [
     category: 'fresas',
     popular: false,
   },
-  {
+   {
     id: 8,
-    name: 'Hotcakes con nutella',
-    description: 'Hotcakes esponjosos con crema de avellanas, crema y miel de maple',
-    price: 95,
-    image: '/images/hotcakes_nutella.png',
-    category: 'hotcakes',
-    popular: true,
-  },
-  {
-    id: 9,
     name: 'Waffles con fresas',
     description: 'Waffle crujiente con fresas, crema batida y sirope',
     price: 100,
@@ -80,6 +71,16 @@ export const products = [
     category: 'hotcakes',
     popular: true,
   },
+  {
+    id: 9,
+    name: 'Hotcakes con nutella',
+    description: 'Hotcakes esponjosos con crema de avellanas, crema y miel de maple',
+    price: 95,
+    image: '/images/hotcakes_nutella.png',
+    category: 'hotcakes',
+    popular: true,
+  },
+ 
   {
     id: 10,
     name: 'Hot cakes con fresas',
@@ -110,7 +111,7 @@ export const products = [
   {
     id: 13,
     name: 'Malteada de chocolate',
-    description: 'Malteada de chocolate con crema batida y chispas',
+    description: 'Leche, crema batida, suero de chocolate, helado de chocolate y chantilly',
     price: 75,
     image: '/images/malteadachoco.jpg',
     category: 'bebidas',
@@ -119,7 +120,7 @@ export const products = [
   {
     id: 14,
     name: 'Malteada de vainilla',
-    description: 'Malteada de vainilla con crema batida, chispas de chocolate blanco y trozos de galleta',
+    description: 'Leche, crema batida, esencia de vainilla, helado de vainilla y chantilly',
     price: 75,
     image: '/images/malteada_vainilla.png',
     category: 'bebidas',
@@ -128,7 +129,7 @@ export const products = [
   {
     id: 15,
     name: 'Helado de fresa',
-    description: 'Helado artesanal de fresa con crema',
+    description: 'Helado artesanal de fresas con crema y chispas',
     price: 70,
     image: '/images/heladofresa.jpg',
     category: 'mas',
