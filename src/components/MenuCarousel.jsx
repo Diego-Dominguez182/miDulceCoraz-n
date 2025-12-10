@@ -10,18 +10,13 @@ const categoryLabels = {
 };
 
 export default function MenuCarousel() {
-  // 1) Sacamos las categorías únicas en el orden que aparecen en products
   const categories = Array.from(new Set(products.map((p) => p.category)));
 
   const [index, setIndex] = useState(0);
 
   const total = categories.length;
   const currentCategory = categories[index];
-
-  // 2) Productos de la categoría actual
   const items = products.filter((p) => p.category === currentCategory);
-
-  // 3) Título bonito según categoría
   const title = categoryLabels[currentCategory] ?? "Menú";
 
   const handleNext = () => setIndex((prev) => (prev + 1) % total);
